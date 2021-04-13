@@ -66,8 +66,11 @@ class Result(object):
         valid_mask = target > 0.1
 
         # convert from meters to mm
-        output_mm = 1e3 * output[valid_mask]
-        target_mm = 1e3 * target[valid_mask]
+        # output_mm = 1e3 * output[valid_mask]
+        # target_mm = 1e3 * target[valid_mask]
+
+        output_mm = output
+        target_mm = target
 
         abs_diff = (output_mm - target_mm).abs()
 
